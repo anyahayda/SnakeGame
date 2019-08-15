@@ -6,7 +6,7 @@ The player controls a non-stop snake that can only move up, down, right, left an
 **Stage 1**: Creating a field.  <br />
 **Stage 2**: Making a snake move automatically. <br />
 **Stage 3**: Ability to change the direction of the snake. <br />
-**Stage 4**: Creating snake food. <br />
+**Stage 4**: Creating random snake food. <br />
 **Stage 5**: Increase in snake after eating food. <br />
 **Stage 6**: Creating walls as obstacles. <br />
 **Stage 7**: Ensuring that the game is completed after the snake collides with its own tail, field edge, and walls. <br />
