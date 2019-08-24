@@ -13,3 +13,11 @@ The player controls a non-stop snake that can only move up, down, right, left an
 **Stage 8**: Final testing. <br />
 ## Goal
 To the second stage, the above 1-6 steps will be completed.
+##
+##
+## Implemented in 2nd stage: 
+All stages 1 through 5 inclusive were completed.
+## Additional goals up to stage 3:
+**Stage 9**: Opportunity 'to get' lives. <br />
+**Stage 10**: Levels. <br />
+**Stage 11**: Timer (the time it takes a snake to eat new food and eventually move to a new level or lose life / die). <br />
