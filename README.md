@@ -13,8 +13,6 @@ The player controls a non-stop snake that can only move up, down, right, left an
 **Stage 8**: Final testing. <br />
 ## Goal
 To the second stage, the above 1-6 steps will be completed.
-##
-##
 ## Implemented in 2nd stage: 
 All stages 1 through 5 inclusive were completed.
 ## Additional goals up to stage 3:
