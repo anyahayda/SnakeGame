@@ -1,5 +1,8 @@
-class SnakeDNA {
-    constructor(speed=10, xPos = 0, yPos = 0, xDir = 1, yDir = 0, scale = 10) {
+import {Vector} from "./vector";
+import {__} from "./shortHands.js";
+
+export class SnakeDNA {
+    constructor(speed = 10, xPos = 0, yPos = 0, xDir = 1, yDir = 0, scale = 10) {
         this.speed = new Vector(speed, speed);
         this.position = [new Vector(xPos, yPos)];
         this.direction = new Vector(xDir, yDir);
@@ -11,27 +14,27 @@ class SnakeDNA {
         this.reset();
     }
 
-    reset(){
+    reset() {
         this.isWon = false;
         this.addScore(-this.score);
         this.addLife(-this.lives);
         this.tailCount = 1;
-        this.position.splice(1,this.position.length);
+        this.position.splice(1, this.position.length);
     }
 
-    addScore(count){
-        this.score+=count;
+    addScore(count) {
+        this.score += count;
         __("__score").innerText = this.score;
     }
 
-    addLife(count){
-        this.lives+=count;
+    addLife(count) {
+        this.lives += count;
         __("__lives").innerText = this.lives;
     }
 
-    addTail(tailCount=1){
-        for(let i=0;i<tailCount;i++){
-            this.position.push(new Vector(-this.scale,-this.scale));
+    addTail(tailCount = 1) {
+        for (let i = 0; i < tailCount; i++) {
+            this.position.push(new Vector(-this.scale, -this.scale));
             this.tailCount++;
         }
     }
@@ -41,7 +44,7 @@ class SnakeDNA {
     }
 
     switchDirection(xDir, yDir) {
-        if((this.direction.x + xDir) === 0 && (this.direction.y + yDir) === 0)
+        if ((this.direction.x + xDir) === 0 && (this.direction.y + yDir) === 0)
             return;
         this.direction = new Vector(xDir, yDir);
     }
@@ -51,30 +54,30 @@ class SnakeDNA {
     }
 
     update() {
-        let pos = this.position[this.tailCount-1];
+        let pos = this.position[this.tailCount - 1];
         pos.copy(this.position[0]);
         pos.add(this.velocity);
         let envS = this.environment.size;
 
         pos.x = (pos.x > envS.x) ? 0 : ((pos.x + this.scale) < 0) ? envS.x : pos.x;
         pos.y = (pos.y > envS.y) ? 0 : ((pos.y + this.scale) < 0) ? envS.y : pos.y;
-        this.position.unshift(this.position.splice(this.tailCount-1,1)[0]);
+        this.position.unshift(this.position.splice(this.tailCount - 1, 1)[0]);
     }
 
-    show() {
-        for(let i=0;i<this.tailCount;i++){
+    show(sketch) {
+        for (let i = 0; i < this.tailCount; i++) {
             let pos = this.position[i];
-            if(i===0){
-                fill(255,255,0);
+            if (i === 0) {
+                sketch.fill(255, 255, 0);
             }
-            rect(pos.x, pos.y, this.scale, this.scale);
-            fill(255);
+            sketch.rect(pos.x, pos.y, this.scale, this.scale);
+            sketch.fill(255);
         }
     }
 
-    gameLoop() {
+    gameLoop(sketch) {
         this.render();
         this.update();
-        this.show();
+        this.show(sketch);
     }
 }

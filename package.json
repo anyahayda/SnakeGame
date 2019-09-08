@@ -1,0 +1,37 @@
+{
+  "name": "SnakeGame",
+  "version": "1.0.0",
+  "description": "Using JS, HTML and CSS without third-party libraries. ## How to play and the rules of the game The player controls a non-stop snake that can only move up, down, right, left and collect food. Each time a snake eats fruit, it will increase by the same length. This is what complicates the game, as you must avoid collisions with your own tail, the edges of the field and the walls that serve as obstacles. As soon as one of these options happens, the game starts again.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "start": "webpack-dev-server --open",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anyahayda/SnakeGame.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anyahayda/SnakeGame/issues"
+  },
+  "homepage": "https://github.com/anyahayda/SnakeGame#readme",
+  "devDependencies": {
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.8",
+    "webpack-dev-server": "^3.8.0"
+  },
+  "dependencies": {
+    "hammerjs": "^2.0.8",
+    "p5": "^0.7.2"
+  }
+}

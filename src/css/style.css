@@ -1,3 +1,5 @@
+@import './normalizer.css';
+
 body{
     overflow: hidden;
     background-color: #cfebfd;
@@ -9,7 +11,7 @@ body{
     width: 100%;
     bottom: 0px;
     left: 0px;
-    background-image: url("http://pngimg.com/uploads/grass/grass_PNG10854.png");
+    background-image: url("../images/grass.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
