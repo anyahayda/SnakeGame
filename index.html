@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Snake</title>
+</head>
+<body>
+<div id="metaBanner">
+    <div class="container">
+        <div class="block">
+            <div class="number" id="__level">Loading...</div>
+            <div class="banner-icon">
+                <img src="9109462a0b1676d469b92b3d56b28c29.png" alt="level">
+            </div>
+        </div>
+        <div class="block">
+            <div style="display: flex">
+                <div class="number" id="__lives">Loading...</div>
+            </div>
+            <div class="banner-icon">
+                <img src="ccce40415913ff27672d03721b7674cc.jpg" alt="lives">
+            </div>
+        </div>
+        <div class="block">
+            <div class="number" id="__scoreNeed">Loading...</div>
+            <div class="banner-icon">
+                <img src="80178157a24f9ab0c048117362c8af79.jpg" alt="level target">
+            </div>
+        </div>
+        <div class="block">
+            <div class="number" id="__score">Loading...</div>
+            <div class="banner-icon">
+                <img src="e4812c62116f9546dd39b8cdedc5d408.png" alt="score">
+            </div>
+        </div>
+        <div class="block">
+            <div class="number" id="__timer">Loading...</div>
+            <div class="banner-icon">
+                <img src="be16c9132b4ef654a31b795f462791e1.png" alt="timer">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="popup" id="gameOver">
+        <div class="popup-inner">
+            <div class="popup__text">
+                <h1>Game Over</h1>
+                <a href="#" onclick="restart();">Restart</a>
+            </div>
+            <a class="popup__close" href="#">X</a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="popup" id="youWon">
+        <div class="popup-inner">
+            <div class="popup__text">
+                <h1>You Won</h1>
+                <p><a href="#" onclick="restart();">Restart</a></p>
+            </div>
+            <a class="popup__close" href="#">X</a>
+        </div>
+    </div>
+</div>
+
+<div id="myGameArea"></div>
+<div id="grassFooter"></div>
+
+<script type="text/javascript" src="bundle.js"></script></body>
+</html>
